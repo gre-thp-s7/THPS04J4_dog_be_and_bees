@@ -1,24 +1,21 @@
-# README
+![La montagne](http://informations-documents.com/coloriages.dessins/coloriages/coloriage_montagne4.jpg)
+   ## Team Grenoble
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Clone notre repo et c'est parti !
 
-Things you may want to cover:
+- Postionne toi dans le dossier,
+- Bundle install
+- rails db:migrate:status # Tu verras que les tables sont créées,
+- rails db:migrate # Ça migre au calme,
+- rails db:migrate:status # Check de la migration,
+- rails db:seed # Peuple les champs des tableaux, si pb, essayer un `db:drop` puis `db:create` puis recommencer la manip
+- rails console,
+- Balade toi dans la BDD !
 
-* Ruby version
+### La TEAM !
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Maxime
+- Quentin
+- Iannis
+- Charles
+- Guillaume
