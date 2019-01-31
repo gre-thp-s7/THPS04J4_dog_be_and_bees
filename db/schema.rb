@@ -28,18 +28,11 @@ ActiveRecord::Schema.define(version: 2019_01_31_171600) do
     t.index ["city_id"], name: "index_dog_sitters_on_city_id"
   end
 
-  create_table "dog_strolls", force: :cascade do |t|
-    t.integer "stroll_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["stroll_id"], name: "index_dog_strolls_on_stroll_id"
-  end
-
   create_table "dogs", force: :cascade do |t|
     t.text "dog_name"
     t.text "owner"
     t.text "race"
-    t.text "alimention"
+    t.text "alimentation"
     t.integer "owner_phone_number"
     t.integer "city_id"
     t.datetime "created_at", null: false
@@ -47,9 +40,18 @@ ActiveRecord::Schema.define(version: 2019_01_31_171600) do
     t.index ["city_id"], name: "index_dogs_on_city_id"
   end
 
+  create_table "dogs_strolls", force: :cascade do |t|
+    t.integer "stroll_id"
+    t.integer "dog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dog_id"], name: "index_dogs_strolls_on_dog_id"
+    t.index ["stroll_id"], name: "index_dogs_strolls_on_stroll_id"
+  end
+
   create_table "strolls", force: :cascade do |t|
     t.text "place"
-    t.time "when_it_happend"
+    t.datetime "when_it_happend"
     t.integer "dog_sitter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

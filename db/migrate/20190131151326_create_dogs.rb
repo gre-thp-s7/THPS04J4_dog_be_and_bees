@@ -4,7 +4,7 @@ class CreateDogs < ActiveRecord::Migration[5.2]
       t.text :dog_name
       t.text :owner
       t.text :race
-      t.text :alimention
+      t.text :alimentation
       t.integer :owner_phone_number
       t.belongs_to :city, index: true
       t.timestamps
